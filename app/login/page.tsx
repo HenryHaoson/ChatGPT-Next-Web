@@ -15,10 +15,8 @@ export default function Login() {
               height={20}
             />
           </a>
-          <h3 className="text-xl font-semibold">Sign In</h3>
-          <p className="text-sm text-gray-500">
-            Use your email and password to sign in
-          </p>
+          <h3 className="text-xl font-semibold">登录</h3>
+          <p className="text-sm text-gray-500">使用邮箱和密码登录</p>
         </div>
         <Form type="login" />
       </div>

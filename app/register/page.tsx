@@ -15,10 +15,8 @@ export default function Login() {
               height={20}
             />
           </a>
-          <h3 className="text-xl font-semibold">Sign Up</h3>
-          <p className="text-sm text-gray-500">
-            Create an account with your email and password
-          </p>
+          <h3 className="text-xl font-semibold">注册</h3>
+          <p className="text-sm text-gray-500">使用邮箱和密码注册</p>
         </div>
         <Form type="register" />
       </div>
