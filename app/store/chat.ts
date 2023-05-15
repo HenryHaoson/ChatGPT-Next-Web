@@ -4,7 +4,7 @@ import { persist } from "zustand/middleware";
 import { trimTopic } from "../utils";
 
 import Locale from "../locales";
-import { showToast } from "../components/ui-lib";
+import { showToast } from "../../components/ui-lib";
 import { ModelType } from "./config";
 import { createEmptyMask, Mask } from "./mask";
 import { StoreKey } from "../constant";

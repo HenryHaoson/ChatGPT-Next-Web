@@ -1,5 +1,5 @@
-import DeleteIcon from "../icons/delete.svg";
-import BotIcon from "../icons/bot.svg";
+import DeleteIcon from "@/icons/delete.svg";
+import BotIcon from "@/icons/bot.svg";
 
 import styles from "./home.module.scss";
 import {
@@ -9,13 +9,13 @@ import {
   OnDragEndResponder,
 } from "@hello-pangea/dnd";
 
-import { useChatStore } from "../store";
+import { useChatStore } from "../app/store";
 
-import Locale from "../locales";
+import Locale from "../app/locales";
 import { Link, useNavigate } from "react-router-dom";
-import { Path } from "../constant";
+import { Path } from "../app/constant";
 import { MaskAvatar } from "./mask";
-import { Mask } from "../store/mask";
+import { Mask } from "../app/store/mask";
 import { useRef, useEffect } from "react";
 
 export function ChatItem(props: {

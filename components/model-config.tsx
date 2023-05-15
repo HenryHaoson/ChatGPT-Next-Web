@@ -1,6 +1,6 @@
-import { ALL_MODELS, ModalConfigValidator, ModelConfig } from "../store";
+import { ALL_MODELS, ModalConfigValidator, ModelConfig } from "../app/store";
 
-import Locale from "../locales";
+import Locale from "../app/locales";
 import { InputRange } from "./input-range";
 import { List, ListItem, Select } from "./ui-lib";
 

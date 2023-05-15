@@ -2,7 +2,7 @@ import { create } from "zustand";
 import { persist } from "zustand/middleware";
 import { FETCH_COMMIT_URL, StoreKey } from "../constant";
 import { api } from "../client/api";
-import { showToast } from "../components/ui-lib";
+import { showToast } from "../../components/ui-lib";
 
 export interface UpdateStore {
   lastUpdate: number;

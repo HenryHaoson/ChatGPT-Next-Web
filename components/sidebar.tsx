@@ -3,17 +3,17 @@ import { useEffect, useRef } from "react";
 import styles from "./home.module.scss";
 
 import { IconButton } from "./button";
-import SettingsIcon from "../icons/settings.svg";
-import GithubIcon from "../icons/github.svg";
-import ChatGptIcon from "../icons/chatgpt.svg";
-import AddIcon from "../icons/add.svg";
-import CloseIcon from "../icons/close.svg";
-import MaskIcon from "../icons/mask.svg";
-import PluginIcon from "../icons/plugin.svg";
+import SettingsIcon from "@/icons/settings.svg";
+import GithubIcon from "@/icons/github.svg";
+import ChatGptIcon from "@/icons/chatgpt.svg";
+import AddIcon from "@/icons/add.svg";
+import CloseIcon from "@/icons/close.svg";
+import MaskIcon from "@/icons/mask.svg";
+import PluginIcon from "@/icons/plugin.svg";
 
-import Locale from "../locales";
+import Locale from "../app/locales";
 
-import { useAppConfig, useChatStore } from "../store";
+import { useAppConfig, useChatStore } from "../app/store";
 
 import {
   MAX_SIDEBAR_WIDTH,
@@ -21,10 +21,10 @@ import {
   NARROW_SIDEBAR_WIDTH,
   Path,
   REPO_URL,
-} from "../constant";
+} from "../app/constant";
 
 import { Link, useNavigate } from "react-router-dom";
-import { useMobileScreen } from "../utils";
+import { useMobileScreen } from "../app/utils";
 import dynamic from "next/dynamic";
 import { showToast } from "./ui-lib";
 

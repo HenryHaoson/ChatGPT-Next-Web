@@ -1,8 +1,8 @@
 /* eslint-disable @next/next/no-page-custom-font */
-import "./styles/globals.scss";
-import "./styles/markdown.scss";
-import "./styles/highlight.scss";
-import { getBuildConfig } from "./config/build";
+import "@/styles/globals.scss";
+import "@/styles/markdown.scss";
+import "@/styles/highlight.scss";
+import { getBuildConfig } from "../config/build";
 
 const buildConfig = getBuildConfig();
 

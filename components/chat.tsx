@@ -1,25 +1,25 @@
 import { useDebouncedCallback } from "use-debounce";
 import { useState, useRef, useEffect, useLayoutEffect } from "react";
 
-import SendWhiteIcon from "../icons/send-white.svg";
-import BrainIcon from "../icons/brain.svg";
-import RenameIcon from "../icons/rename.svg";
-import ExportIcon from "../icons/share.svg";
-import ReturnIcon from "../icons/return.svg";
-import CopyIcon from "../icons/copy.svg";
-import DownloadIcon from "../icons/download.svg";
-import LoadingIcon from "../icons/three-dots.svg";
-import PromptIcon from "../icons/prompt.svg";
-import MaskIcon from "../icons/mask.svg";
-import MaxIcon from "../icons/max.svg";
-import MinIcon from "../icons/min.svg";
-import ResetIcon from "../icons/reload.svg";
+import SendWhiteIcon from "@/icons/send-white.svg";
+import BrainIcon from "@/icons/brain.svg";
+import RenameIcon from "@/icons/rename.svg";
+import ExportIcon from "@/icons/share.svg";
+import ReturnIcon from "@/icons/return.svg";
+import CopyIcon from "@/icons/copy.svg";
+import DownloadIcon from "@/icons/download.svg";
+import LoadingIcon from "@/icons/three-dots.svg";
+import PromptIcon from "@/icons/prompt.svg";
+import MaskIcon from "@/icons/mask.svg";
+import MaxIcon from "@/icons/max.svg";
+import MinIcon from "@/icons/min.svg";
+import ResetIcon from "@/icons/reload.svg";
 
-import LightIcon from "../icons/light.svg";
-import DarkIcon from "../icons/dark.svg";
-import AutoIcon from "../icons/auto.svg";
-import BottomIcon from "../icons/bottom.svg";
-import StopIcon from "../icons/pause.svg";
+import LightIcon from "@/icons/light.svg";
+import DarkIcon from "@/icons/dark.svg";
+import AutoIcon from "@/icons/auto.svg";
+import BottomIcon from "@/icons/bottom.svg";
+import StopIcon from "@/icons/pause.svg";
 
 import {
   ChatMessage,
@@ -31,7 +31,7 @@ import {
   Theme,
   useAppConfig,
   DEFAULT_TOPIC,
-} from "../store";
+} from "../app/store";
 
 import {
   copyToClipboard,
@@ -39,13 +39,13 @@ import {
   selectOrCopy,
   autoGrowTextArea,
   useMobileScreen,
-} from "../utils";
+} from "../app/utils";
 
 import dynamic from "next/dynamic";
 
-import { ChatControllerPool } from "../client/controller";
-import { Prompt, usePromptStore } from "../store/prompt";
-import Locale from "../locales";
+import { ChatControllerPool } from "../app/client/controller";
+import { Prompt, usePromptStore } from "../app/store/prompt";
+import Locale from "../app/locales";
 
 import { IconButton } from "./button";
 import styles from "./home.module.scss";
@@ -53,11 +53,11 @@ import chatStyle from "./chat.module.scss";
 
 import { ListItem, Modal, showModal } from "./ui-lib";
 import { useLocation, useNavigate } from "react-router-dom";
-import { LAST_INPUT_KEY, Path } from "../constant";
+import { LAST_INPUT_KEY, Path } from "../app/constant";
 import { Avatar } from "./emoji";
 import { MaskAvatar, MaskConfig } from "./mask";
-import { useMaskStore } from "../store/mask";
-import { useCommand } from "../command";
+import { useMaskStore } from "../app/store/mask";
+import { useCommand } from "../app/command";
 
 const Markdown = dynamic(async () => (await import("./markdown")).Markdown, {
   loading: () => <LoadingIcon />,

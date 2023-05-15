@@ -6,10 +6,10 @@ import RehypeKatex from "rehype-katex";
 import RemarkGfm from "remark-gfm";
 import RehypeHighlight from "rehype-highlight";
 import { useRef, useState, RefObject, useEffect } from "react";
-import { copyToClipboard } from "../utils";
+import { copyToClipboard } from "../app/utils";
 import mermaid from "mermaid";
 
-import LoadingIcon from "../icons/three-dots.svg";
+import LoadingIcon from "@/icons/three-dots.svg";
 import React from "react";
 
 export function Mermaid(props: { code: string; onError: () => void }) {

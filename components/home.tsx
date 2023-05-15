@@ -6,13 +6,13 @@ import { useState, useEffect } from "react";
 
 import styles from "./home.module.scss";
 
-import BotIcon from "../icons/bot.svg";
-import LoadingIcon from "../icons/three-dots.svg";
+import BotIcon from "@/icons/bot.svg";
+import LoadingIcon from "@/icons/three-dots.svg";
 
-import { getCSSVar, useMobileScreen } from "../utils";
+import { getCSSVar, useMobileScreen } from "../app/utils";
 
 import dynamic from "next/dynamic";
-import { Path, SlotID } from "../constant";
+import { Path, SlotID } from "../app/constant";
 import { ErrorBoundary } from "./error";
 
 import {
@@ -22,7 +22,7 @@ import {
   useLocation,
 } from "react-router-dom";
 import { SideBar } from "./sidebar";
-import { useAppConfig } from "../store/config";
+import { useAppConfig } from "../app/store/config";
 
 export function Loading(props: { noLogo?: boolean }) {
   return (
