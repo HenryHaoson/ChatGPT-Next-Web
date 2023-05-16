@@ -3,11 +3,11 @@
 import { useState } from "react";
 import { signIn } from "next-auth/react";
 import LoadingDots from "@/components/loading-dots";
-import toast from "react-hot-toast";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import styles from "./home.module.scss";
 import { IconButton } from "./button";
+import { showToast } from "./ui-lib";
 
 export default function Form({ type }: { type: "login" | "register" }) {
   const [loading, setLoading] = useState(false);
@@ -26,10 +26,10 @@ export default function Form({ type }: { type: "login" | "register" }) {
             // @ts-ignore
           }).then(({ ok, error }) => {
             setLoading(false);
-            if (ok) {
-              router.push("/protected");
+            if (!error) {
+              router.push("/");
             } else {
-              toast.error(error);
+              showToast(error)
             }
           });
         } else {
@@ -45,12 +45,12 @@ export default function Form({ type }: { type: "login" | "register" }) {
           }).then(async (res) => {
             setLoading(false);
             if (res.status === 200) {
-              toast.success("Account created! Redirecting to login...");
+             showToast("注册成功，正在跳转到首页");
               setTimeout(() => {
-                router.push("/login");
+                router.push("/");
               }, 2000);
             } else {
-              toast.error(await res.text());
+              showToast(await res.text());
             }
           });
         }
@@ -62,7 +62,7 @@ export default function Form({ type }: { type: "login" | "register" }) {
           htmlFor="邮箱地址"
           className="block text-xs text-gray-600 uppercase"
         >
-          Email Address
+          邮箱地址
         </label>
         <input
           id="email"
@@ -79,7 +79,7 @@ export default function Form({ type }: { type: "login" | "register" }) {
           htmlFor="password"
           className="block text-xs text-gray-600 uppercase"
         >
-          Password
+          密码
         </label>
         <input
           id="password"

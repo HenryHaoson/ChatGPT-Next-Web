@@ -2,13 +2,14 @@ import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import prisma from "@/lib/prisma";
 import { compare } from "bcrypt";
-
-export default NextAuth({
+const testSecret = "testSecret";
+const handler = NextAuth({
   providers: [
     CredentialsProvider({
       credentials: {},
       // @ts-ignore
       async authorize(credentials, _) {
+        console.log("credentials", credentials);
         const { email, password } = credentials as {
           email: string;
           password: string;
@@ -21,6 +22,7 @@ export default NextAuth({
             email,
           },
         });
+        console.log("user", user);
         // if user doesn't exist or password doesn't match
         if (!user || !(await compare(password, user.password))) {
           throw new Error("Invalid username or password");
@@ -30,4 +32,11 @@ export default NextAuth({
     }),
   ],
   session: { strategy: "jwt" },
+  secret: testSecret,
+  pages: {
+    signIn: "/login",
+    newUser: "/register",
+  },
 });
+
+export { handler as GET, handler as POST };

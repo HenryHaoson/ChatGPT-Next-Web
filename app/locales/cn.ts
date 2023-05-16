@@ -63,6 +63,7 @@ const cn = {
       ClearAll: "清除所有数据",
       ResetAll: "重置所有选项",
       Close: "关闭",
+      Logout: "退出登录",
       ConfirmResetAll: "确认重置所有配置？",
       ConfirmClearAll: "确认清除所有数据？",
     },

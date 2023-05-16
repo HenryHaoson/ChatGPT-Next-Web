@@ -27,6 +27,10 @@
       fill: white !important;
     }
   }
+  &.danger {
+    background-color: var(--danger);
+    color: white;
+  }
 }
 
 .shadow {

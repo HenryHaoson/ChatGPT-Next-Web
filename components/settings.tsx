@@ -1,4 +1,5 @@
 import { useState, useEffect, useMemo, HTMLProps, useRef } from "react";
+import { signOut } from "next-auth/react"
 
 import styles from "./settings.module.scss";
 
@@ -233,7 +234,7 @@ export function Settings() {
       "[Update] remote version ",
       new Date(+updateStore.remoteVersion).toLocaleString(),
     );
-  }
+  }    
 
   const usage = {
     used: updateStore.used,
@@ -322,6 +323,20 @@ export function Settings() {
               onClick={() => navigate(Path.Home)}
               bordered
               title={Locale.Settings.Actions.Close}
+            />
+          </div>
+          <div className="window-action-button">
+            <IconButton
+              type="danger"
+              text="退出登录"
+              onClick={() => {
+                if (confirm(Locale.Settings.Actions.Logout)) {
+                  signOut();
+                }
+              }}
+              className="bg-red-500"
+              bordered
+              title={Locale.Settings.Actions.Logout}
             />
           </div>
         </div>
