@@ -14,6 +14,7 @@ specifiers:
   autoprefixer: ^10.4.4
   bcrypt: ^5.1.0
   cross-env: ^7.0.3
+  crypto: ^1.0.1
   emoji-picker-react: ^4.4.7
   eslint: ^8.36.0
   eslint-config-next: 13.2.3
@@ -53,6 +54,7 @@ dependencies:
   '@svgr/webpack': 6.5.1
   '@vercel/analytics': 0.1.11_react@18.2.0
   bcrypt: 5.1.0
+  crypto: 1.0.1
   emoji-picker-react: 4.4.9_react@18.2.0
   fuse.js: 6.6.2
   mermaid: 10.1.0_biqbaboplfbrettd7655fr4n2y
@@ -2556,6 +2558,11 @@ packages:
       shebang-command: 2.0.0
       which: 2.0.2
     dev: true
+
+  /crypto/1.0.1:
+    resolution: {integrity: sha512-VxBKmeNcqQdiUQUW2Tzq0t377b54N2bMtXO/qiLa+6eRRmmC4qT3D4OnTGoT/U6O9aklQ/jTwbOtRMTTY8G0Ig==}
+    deprecated: This package is no longer supported. It's now a built-in Node module. If you've depended on crypto, you should switch to the one that's built-in.
+    dev: false
 
   /css-box-model/1.2.1:
     resolution: {integrity: sha512-a7Vr4Q/kd/aw96bnJG332W9V9LkJO69JRcaCYDUqjp6/z0w6VcZjgAcTbgFxEPfBgdnAwlh3iwu+hLopa+flJw==}
