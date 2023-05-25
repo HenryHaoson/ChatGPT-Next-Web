@@ -19,8 +19,8 @@ export async function POST(request: Request) {
         password: await hash(password, 10),
       },
     });
-    const userWithoutPassword = { ...user };
-    delete userWithoutPassword.password;
+    // remove password from user
+    const { password: _, ...userWithoutPassword } = user;
     return new Response(JSON.stringify(userWithoutPassword), {
       status: 200,
     });
