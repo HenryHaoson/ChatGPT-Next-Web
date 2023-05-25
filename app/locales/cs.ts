@@ -65,6 +65,7 @@ const cs: LocaleType = {
       ClearAll: "Vymazat všechna data",
       ResetAll: "Obnovit veškeré nastavení",
       Close: "Zavřít",
+      Logout: "Odhlásit se",
       ConfirmResetAll: "Jste si jisti, že chcete obnovit všechna nastavení?",
       ConfirmClearAll: "Jste si jisti, že chcete smazat všechna data?",
     },
