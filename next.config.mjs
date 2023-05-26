@@ -1,6 +1,8 @@
 /** @type {import('next').NextConfig} */
 
 const nextConfig = {
+  basePath: '/chat/',
+  assetPrefix: '/chat_static/',
   experimental: {
     appDir: true,
   },
