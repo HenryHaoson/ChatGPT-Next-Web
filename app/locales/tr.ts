@@ -67,6 +67,7 @@ const tr: LocaleType = {
       Close: "Kapat",
       ConfirmResetAll: "Tüm ayarları sıfırlamak istediğinizden emin misiniz?",
       ConfirmClearAll: "Tüm sohbeti sıfırlamak istediğinizden emin misiniz?",
+      Logout: "Çıkış Yap",
     },
     Lang: {
       Name: "Language", // ATTENTION: if you wanna add a new translation, please do not translate this value, leave it as `Language`

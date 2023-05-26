@@ -67,6 +67,7 @@ const es: LocaleType = {
       Close: "Cerrar",
       ConfirmResetAll: "Are you sure you want to reset all configurations?",
       ConfirmClearAll: "Are you sure you want to reset all chat?",
+      Logout: "Cerrar sesión",
     },
     Lang: {
       Name: "Language", // ATTENTION: if you wanna add a new translation, please do not translate this value, leave it as `Language`

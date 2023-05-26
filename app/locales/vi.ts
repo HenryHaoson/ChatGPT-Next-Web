@@ -67,6 +67,7 @@ const vi: LocaleType = {
       Close: "Đóng",
       ConfirmResetAll: "Bạn chắc chắn muốn thiết lập lại tất cả cài đặt?",
       ConfirmClearAll: "Bạn chắc chắn muốn thiết lập lại tất cả dữ liệu?",
+      Logout: "Đăng xuất",
     },
     Lang: {
       Name: "Language", // ATTENTION: if you wanna add a new translation, please do not translate this value, leave it as `Language`

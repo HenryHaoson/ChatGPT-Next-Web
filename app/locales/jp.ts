@@ -67,6 +67,7 @@ const jp: LocaleType = {
       Close: "閉じる",
       ConfirmResetAll: "すべての設定をリセットしてもよろしいですか？",
       ConfirmClearAll: "すべてのチャットをリセットしてもよろしいですか？",
+      Logout: "ログアウト",
     },
     Lang: {
       Name: "Language", // ATTENTION: if you wanna add a new translation, please do not translate this value, leave it as `Language`

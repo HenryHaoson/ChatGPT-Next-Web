@@ -67,6 +67,7 @@ const ru: LocaleType = {
       Close: "Закрыть",
       ConfirmResetAll: "Вы уверены, что хотите сбросить все настройки?",
       ConfirmClearAll: "Вы уверены, что хотите очистить все данные?",
+      Logout: "Выйти",
     },
     Lang: {
       Name: "Language", // ATTENTION: if you wanna add a new translation, please do not translate this value, leave it as `Language`

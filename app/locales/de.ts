@@ -68,6 +68,7 @@ const de: LocaleType = {
       ConfirmResetAll:
         "Möchten Sie wirklich alle Konfigurationen zurücksetzen?",
       ConfirmClearAll: "Möchten Sie wirklich alle Chats zurücksetzen?",
+      Logout: "Abmelden",
     },
     Lang: {
       Name: "Language", // ATTENTION: if you wanna add a new translation, please do not translate this value, leave it as `Language`
