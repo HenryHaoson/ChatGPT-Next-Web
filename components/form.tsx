@@ -8,6 +8,7 @@ import { useRouter } from "next/navigation";
 import styles from "./home.module.scss";
 import { IconButton } from "./button";
 import { showToast } from "./ui-lib";
+import { hFetch } from "@/app/utils/fetch";
 
 export default function Form({ type }: { type: "login" | "register" }) {
   const [loading, setLoading] = useState(false);
@@ -33,7 +34,7 @@ export default function Form({ type }: { type: "login" | "register" }) {
             }
           });
         } else {
-          fetch("/api/auth/register", {
+          hFetch("/api/auth/register", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
