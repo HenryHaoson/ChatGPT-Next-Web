@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 
 const nextConfig = {
-  basePath: '/chat',
-  assetPrefix: '/chat_static/',
+  basePath: '/hejo',
+  assetPrefix: '/hejo_static/',
   experimental: {
     appDir: true,
   },
