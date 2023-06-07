@@ -12,5 +12,8 @@ export const hFetch = async (url: string, options: any) => {
       cookie: cookies().toString(),
     };
   }
+  if (url.startsWith("/")) {
+    url = url.slice(1);
+  }
   return fetch(`${url}`, options);
 };
