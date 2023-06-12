@@ -238,7 +238,12 @@ export function Settings() {
   }
 
   async function logout() {
-    await hFetch("/api/auth/logout", "POST");
+    await hFetch("/api/auth/logout", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
     await signOut({ redirect: false });
   }
 
