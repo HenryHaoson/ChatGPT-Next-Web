@@ -27,4 +27,4 @@ export default withAuth({
   secret: "testSecret",
 });
 
-export const config = { matcher: ["/"] };
+export const config = { matcher: ["/chat"] };
