@@ -4,7 +4,8 @@
   "private": false,
   "license": "Anti 996",
   "scripts": {
-    "deploy": "lsof -ti:3000 | xargs kill && next build && nohup node .next/standalone/server.js & disown",
+    "deploy":"nohup node .next/standalone/server.js & disown",
+    "fast-deploy": "lsof -ti:3000 | xargs kill && next build && pnpm run deploy",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
