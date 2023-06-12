@@ -7,5 +7,7 @@ type Props = {
 };
 
 export const NextAuthProvider = ({ children }: Props) => {
-  return <SessionProvider basePath="/hejo">{children}</SessionProvider>;
+  return (
+    <SessionProvider basePath="/hejo/api/auth">{children}</SessionProvider>
+  );
 };
