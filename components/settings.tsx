@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo, HTMLProps, useRef } from "react";
-import { signOut } from "next-auth/react"
+import { signOut } from "next-auth/react";
 
 import styles from "./settings.module.scss";
 
@@ -41,6 +41,7 @@ import { ErrorBoundary } from "./error";
 import { InputRange } from "./input-range";
 import { useNavigate } from "react-router-dom";
 import { Avatar, AvatarPicker } from "./emoji";
+import { hFetch } from "@/app/utils/fetch";
 
 function EditPromptModal(props: { id: number; onClose: () => void }) {
   const promptStore = usePromptStore();
@@ -234,7 +235,12 @@ export function Settings() {
       "[Update] remote version ",
       new Date(+updateStore.remoteVersion).toLocaleString(),
     );
-  }    
+  }
+
+  async function logout() {
+    await hFetch("/api/auth/logout", "POST");
+    await signOut({ redirect: false });
+  }
 
   const usage = {
     used: updateStore.used,
@@ -329,9 +335,9 @@ export function Settings() {
             <IconButton
               type="danger"
               text="退出登录"
-              onClick={() => {
+              onClick={async () => {
                 if (confirm(Locale.Settings.Actions.Logout)) {
-                  signOut();
+                  await logout();
                 }
               }}
               className="bg-red-500"
