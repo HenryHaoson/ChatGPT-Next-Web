@@ -27,4 +27,4 @@ export default withAuth({
   secret: "testSecret",
 });
 
-export const config = { matcher: ["/chat"] };
+export const config = { matcher: ["/hejo/chat"] };
