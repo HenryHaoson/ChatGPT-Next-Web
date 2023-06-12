@@ -28,7 +28,7 @@ export default function Form({ type }: { type: "login" | "register" }) {
           }).then(({ ok, error }) => {
             setLoading(false);
             if (!error) {
-              router.push("/");
+              router.push("/chat");
             } else {
               showToast(error)
             }
@@ -48,7 +48,7 @@ export default function Form({ type }: { type: "login" | "register" }) {
             if (res.status === 200) {
              showToast("注册成功，正在跳转到首页");
               setTimeout(() => {
-                router.push("/");
+                router.push("/chat");
               }, 2000);
             } else {
               showToast(await res.text());
