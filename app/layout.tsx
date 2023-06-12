@@ -2,6 +2,7 @@
 import "@/styles/globals.scss";
 import "@/styles/markdown.scss";
 import "@/styles/highlight.scss";
+import { NextAuthProvider } from "./providers";
 import { getBuildConfig } from "../config/build";
 
 const buildConfig = getBuildConfig();
@@ -36,7 +37,9 @@ export default function RootLayout({
         <link rel="manifest" href="/site.webmanifest"></link>
         <script src="/serviceWorkerRegister.js" defer></script>
       </head>
-      <body>{children}</body>
+      <body>
+        <NextAuthProvider>{children}</NextAuthProvider>
+      </body>
     </html>
   );
 }
