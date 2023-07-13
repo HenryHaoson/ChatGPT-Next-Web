@@ -4,7 +4,7 @@
   "private": false,
   "license": "Anti 996",
   "scripts": {
-    "deploy":"nohup node .next/standalone/server.js & disown",
+    "deploy": "nohup node .next/standalone/server.js & disown",
     "fast-deploy": "lsof -ti:3000 | xargs kill && next build && pnpm run deploy",
     "dev": "next dev",
     "build": "next build",
@@ -20,6 +20,7 @@
     "@prisma/client": "^4.14.0",
     "@svgr/webpack": "^6.5.1",
     "@vercel/analytics": "^0.1.11",
+    "antd-mobile": "^5.32.0",
     "bcrypt": "^5.1.0",
     "crypto": "^1.0.1",
     "emoji-picker-react": "^4.4.7",

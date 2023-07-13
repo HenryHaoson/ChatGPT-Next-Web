@@ -2,7 +2,7 @@
 
 const nextConfig = {
   basePath: '/hejo',
-  assetPrefix: '/hejo_static/',
+  // assetPrefix: '/hejo_static/',
   experimental: {
     appDir: true,
   },
@@ -40,6 +40,18 @@ const nextConfig = {
 
     return config;
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'qcloud.dpfile.com',
+        port: "",
+        pathname: "**"
+      },
+    ]
+  },
+  transpilePackages: ["antd-mobile"],
+
   output: "standalone",
 };
 
